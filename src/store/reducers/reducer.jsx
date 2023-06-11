@@ -38,7 +38,7 @@ const initialState = {
     localStorage.getItem("todo") === "" ||
     localStorage.getItem("todo") === "undefined"
       ? []
-      : JSON.parse(localStorage.getItem("todo")),
+      : JSON.parse(localStorage.getItem("todo")) ?? [],
 };
 
 export const Reducer = (state = initialState, action) => {
